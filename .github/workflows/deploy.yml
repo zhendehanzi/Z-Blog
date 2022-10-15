@@ -25,7 +25,7 @@ jobs:
             - name: Deploy Web
               uses: peaceiris/actions-gh-pages@v3
               with:
-		  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
                   EXTERNAL_REPOSITORY: zhendehanzi/zhendehanzi.github.io
                   PUBLISH_BRANCH: gh-pages
                   PUBLISH_DIR: ./public
