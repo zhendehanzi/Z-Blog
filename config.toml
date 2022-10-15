@@ -2,7 +2,7 @@
 # Site Settings
 
 baseURL = "https://www.iching.love"
-title = "Hugo Theme MemE"
+title = "My Blog"
 languageCode = "en"
 hasCJKLanguage = false
 # Copyright information (Markdown supported)
