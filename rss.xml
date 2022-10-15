@@ -23,10 +23,35 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Sat, 15 Oct 2022 15:23:43 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sat, 15 Oct 2022 15:35:13 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.iching.love/rss.xml" />
         
+        
+            <item>
+                <title>Hello World</title>
+                <link>https://www.iching.love/posts/hello-world/</link>
+                <guid isPermaLink="true">https://www.iching.love/posts/hello-world/</guid>
+                <pubDate>Sat, 15 Oct 2022 13:05:04 &#43;0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description>&lt;p&gt;My name is zsc, it is a test!&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
     </channel>
 </rss>
