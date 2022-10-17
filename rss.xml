@@ -7,12 +7,12 @@
 
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>My Blog</title>
+        <title>真的汉子</title>
         <link>https://www.iching.love/</link>
-        <description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description>
+        <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
         <generator>Hugo 0.104.3 https://gohugo.io/</generator>
         
-            <language>en</language>
+            <language>zh-CN</language>
         
         
             <managingEditor>reuixiy@gmail.com (reuixiy)</managingEditor>
@@ -21,9 +21,9 @@
             <webMaster>reuixiy@gmail.com (reuixiy)</webMaster>
         
         
-            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 15 Oct 2022 15:35:13 &#43;0000</lastBuildDate>
+        <lastBuildDate>Mon, 17 Oct 2022 12:56:56 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.iching.love/rss.xml" />
         
@@ -36,7 +36,7 @@
                 
                     <author>reuixiy@gmail.com (reuixiy)</author>
                 
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;p&gt;My name is zsc, it is a test!&lt;/p&gt;
 </description>
