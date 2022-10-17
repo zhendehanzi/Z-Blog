@@ -4,15 +4,15 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">真的汉子</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2022-10-17T12:56:56&#43;00:00</updated>
+    <updated>2022-10-17T13:35:04&#43;00:00</updated>
     <id>https://www.iching.love/</id>
     <link rel="alternate" type="text/html" href="https://www.iching.love/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.iching.love/atom.xml" />
     <author>
-            <name>reuixiy</name>
+            <name>Mr.Z</name>
             <uri>https://www.iching.love</uri>
             
-                <email>reuixiy@gmail.com</email>
+                <email>xuexizhuanyong147@gmail.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.104.3">Hugo</generator>
@@ -20,12 +20,12 @@
             <title type="text">Hello World</title>
             <link rel="alternate" type="text/html" href="https://www.iching.love/posts/hello-world/" />
             <id>https://www.iching.love/posts/hello-world/</id>
-            <updated>2022-10-17T12:56:55&#43;00:00</updated>
+            <updated>2022-10-17T13:35:02&#43;00:00</updated>
             <published>2022-10-15T13:05:04&#43;08:00</published>
             <author>
-                    <name>reuixiy</name>
-                    <uri>https://io-oi.me/</uri>
-                    <email>reuixiy@gmail.com</email>
+                    <name>Mr.Z</name>
+                    <uri>https://www.iching.love</uri>
+                    <email>xuexizhuanyong147@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">My name is zsc, it is a test!</summary>
             
