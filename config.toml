@@ -49,10 +49,10 @@ uglyURLs = false
     categories = "/categories/:slug/"
     tags = "/tags/:slug/"
 
-# 类别
-[taxonomies]
-    category = "categories"
-    tag = "tags"
+# # 类别
+# [taxonomies]
+#     category = "categories"
+#     tag = "tags"
 
 # 修改时间
 [frontmatter]
@@ -100,11 +100,11 @@ uglyURLs = false
     # 邮箱
     email = "xuexizhuanyong147@gmail.com"
     # 座右铭或简介
-    motto = ""
+    motto = "乾，健也；坤，顺也；震，动也；巽，入也；坎，陷也；离，丽也；艮，止也；兑，说也"
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
-    website = ""
+    website = "https://www.iching.love/"
     # 推特
     twitter = ""
 
@@ -189,24 +189,30 @@ uglyURLs = false
 
 [menu]
     ## 菜单栏
+    # [[menu.main]]
+    #     pageref = "/"
+    #     name = "首页"
+    #     weight = 1
+    #     pre = "internal"
+    #     post = "home"
     [[menu.main]]
-        pageref = "/"
-        name = "首页"
+        pageref = "/life/"
+        name = "生活"
         weight = 1
         pre = "internal"
         post = "home"
     [[menu.main]]
-        pageref = "/posts/"
+        pageref = "/tech/"
         name = "技术"
         weight = 2
         pre = "internal"
-        post = "archive"
+        post = "link"
     [[menu.main]]
-        pageref = "/categories/"
-        name = "分类"
+        pageref = "/idea/"
+        name = "想法"
         weight = 3
         pre = "internal"
-        post = "th"
+        post = "pagelines"
     [[menu.main]]
         pageref = "/tags/"
         name = "标签"
@@ -218,18 +224,58 @@ uglyURLs = false
         name = "关于"
         weight = 5
         pre = "internal"
-        post = "user-circle"
+        post = "user-circle"    
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
     [[menu.main]]
         weight = 7
         identifier = "lang-switcher"
+    [[menu.main]]
+        weight = 8
+        identifier = "search"
+        post = "search"
+
+    # [[menu.main]]
+    #     pageref = "/categories/"
+    #     name = "分类"
+    #     weight = 3
+    #     pre = "internal"
+    #     post = "th"
+    # [[menu.main]]
+    #     pageref = "/tags/"
+    #     name = "标签"
+    #     weight = 4
+    #     pre = "internal"
+    #     post = "tags"
+    # [[menu.main]]
+    #     pageref = "/about/"
+    #     name = "关于"
+    #     weight = 5
+    #     pre = "internal"
+    #     post = "user-circle"
+    # [[menu.main]]
+    #     weight = 6
+    #     identifier = "theme-switcher"
+    # [[menu.main]]
+    #     weight = 7
+    #     identifier = "lang-switcher"
     # [[menu.main]]
     #     weight = 8
     #     identifier = "search"
     #     post = "search"
 
+    # 首页的底部链接
+    [[menu.home]]
+        pageref = "/home/"
+        name = "Home"
+        weight = 1
+        pre = "internal"
+    # [[menu.home]]
+    #     url = "https://t.me/yixiuer"
+    #     name = "Telegram"
+    #     weight = 2
+    #     pre = "external"
 
 
 ##########################################
@@ -290,11 +336,11 @@ uglyURLs = false
     # 说明：对弹性布局的顶栏无效
 
     # 是否在首页显示
-    displayMenuInHome = true
+    displayMenuInHome = false
     # 说明：对弹性布局的顶栏无效
 
     # 是否按文章分区高亮当前菜单项
-    activeInSection = false
+    activeInSection = true
     # 说明：如果开启，那么当某一文章的分区名是某
     #      一菜单项中的 `url` 时，该文章页面中
     #      的该菜单项也会被高亮
@@ -318,7 +364,7 @@ uglyURLs = false
     homeLinksPadding = 1
 
     ## 「视频片段」
-    homePoster = "./images/reflection-of-tree-at-night-10s-720p.jpeg"
+    homePoster = "/images/reflection-of-tree-at-night-10s-720p.jpeg"
     homeVideoWebm = "/videos/Reflection Of Tree At Night.webm"
     homeVideoMp4 = "/videos/Reflection Of Tree At Night.mp4"
     homeLogo = "/icons/abstract.png"
@@ -339,7 +385,7 @@ uglyURLs = false
 
     # 站点的描述
     # siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
-    siteDescription = "Mr.Z's Blog 是一个分享技术、生活、创意和思考的个人博客"
+    siteDescription = "Mr.Z's Blog 一个分享技术、生活、创意和思考的个人博客"
 
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
@@ -370,7 +416,7 @@ uglyURLs = false
     # 的树状分类，故如需保留树状分类，建议适应
     # Hugo 的设计理念——分区。
 
-    categoryBy = "categories"
+    categoryBy = "sections"
     # 注意：如果你设置为 `sections`，请务必将
     #      此配置文件中的类别（taxonomies）中
     #      的 `categories` 删除，不然分类页
@@ -419,7 +465,7 @@ uglyURLs = false
     #      单位：em
 
     # 是否显示列表标题
-    displayListTitle = true
+    displayListTitle = false
 
     # 日期的格式
     listDateFormat = "1 月 2 日"
@@ -430,7 +476,7 @@ uglyURLs = false
     # 说明：left（左边）或 right（右边）
 
     # 是否按月份分隔列表
-    groupByMonth = true
+    groupByMonth = false
 
     # 是否开启十二生肖
     chineseZodiac = true
@@ -555,7 +601,7 @@ uglyURLs = false
 
     # 说明：仅在生产环境（production）下渲染
 
-    enableServiceWorker = false
+    enableServiceWorker = true
 
 
     ######################################
@@ -914,7 +960,7 @@ uglyURLs = false
 
     ######################################
     # 滚动条
-    customizeScrollbar = true
+    customizeScrollbar = false
 
 
     ######################################
@@ -960,7 +1006,7 @@ uglyURLs = false
     ######################################
     ## 字号（单位：px）
 
-    fontSize = 16
+    fontSize = 18
 
     ######################################
     ## 制表符的宽度
@@ -1224,7 +1270,7 @@ uglyURLs = false
     displayFooter = true
 
     # 是否在首页显示
-    displayFooterInHome = true
+    displayFooterInHome = false
 
     displayCopyleftSymbol = false
     # 是否显示版权符号（©）
@@ -1376,11 +1422,11 @@ uglyURLs = false
     # 404 页面
 
     # 视频封面
-    fofPoster = ""
+    fofPoster = "./images/reflection-of-tree-at-night-10s-720p.jpeg"
 
     # 视频地址
-    fofVideoWebm = ""
-    fofVideoMp4 = ""
+    fofVideoWebm = "/videos/Reflection Of Tree At Night.webm"
+    fofVideoMp4 = "/videos/Reflection Of Tree At Night.mp4"
     # 说明：视频地址可留空（""）
 
 
