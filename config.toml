@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://www.iching.love"
-title = "真的汉子"
+title = "Mr.Z's Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -100,13 +100,13 @@ uglyURLs = false
     # 邮箱
     email = "xuexizhuanyong147@gmail.com"
     # 座右铭或简介
-    motto = "易、像、辞"
+    motto = ""
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
     website = ""
     # 推特
-    twitter = "reuixiy"
+    twitter = ""
 
 # 相关文章
 [related]
@@ -197,7 +197,7 @@ uglyURLs = false
         post = "home"
     [[menu.main]]
         pageref = "/posts/"
-        name = "文章"
+        name = "技术"
         weight = 2
         pre = "internal"
         post = "archive"
@@ -309,7 +309,7 @@ uglyURLs = false
     # 3. posts     文章摘要
     # 4. page      普通页面
 
-    homeLayout = "poetry"
+    homeLayout = "footage"
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
@@ -320,14 +320,14 @@ uglyURLs = false
     ## 「视频片段」
     homePoster = ""
     homeVideoWebm = ""
-    homeVideoMp4 = ""
-    homeLogo = ""
-    homeLogoLink = ""
-    homeTitle = ""
-    homeMotto = ""
+    homeVideoMp4 = "/videos/Reflection Of Tree At Night.mp4"
+    homeLogo = "/icons/abstract.png"
+    homeLogoLink = "/about/"
+    homeTitle = "Mr.Z's Blog"
+    homeMotto = "易·象·辞"
     homeDescription = ""
-    homeKeywords = ""
-    homeLinksDelimiter = ""
+    homeKeywords = "天地定位，山泽通气，雷风相薄，水火不相射，八卦相错，数往者顺，知来者逆；是故，易逆数也"
+    homeLinksDelimiter = "."
 
 
     ######################################
