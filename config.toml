@@ -318,8 +318,8 @@ uglyURLs = false
     homeLinksPadding = 1
 
     ## 「视频片段」
-    homePoster = ""
-    homeVideoWebm = ""
+    homePoster = "./images/reflection-of-tree-at-night-10s-720p.jpeg"
+    homeVideoWebm = "/videos/Reflection Of Tree At Night.webm"
     homeVideoMp4 = "/videos/Reflection Of Tree At Night.mp4"
     homeLogo = "/icons/abstract.png"
     homeLogoLink = "/about/"
@@ -338,16 +338,18 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
+    # siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
+    siteDescription = "Mr.Z's Blog 是一个分享技术、生活、创意和思考的个人博客"
+
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
     # 站点的创建时间
-    siteCreatedTime = "1969-07-20T20:17:43+00:00"
+    siteCreatedTime = "2022-10-01T00:00:00+00:00"
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "reuixiy"
+    siteTwitter = ""
     # 说明：用于 Twitter Cards
 
 
