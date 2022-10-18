@@ -3,8 +3,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Mr.Z&#39;s Blog</title>
-    <subtitle type="html">Mr.Z&#39;s Blog 是一个分享技术、生活、创意和思考的个人博客</subtitle>
-    <updated>2022-10-18T06:09:34&#43;00:00</updated>
+    <subtitle type="html">Mr.Z&#39;s Blog 一个分享技术、生活、创意和思考的个人博客</subtitle>
+    <updated>2022-10-18T13:29:54&#43;00:00</updated>
     <id>https://www.iching.love/</id>
     <link rel="alternate" type="text/html" href="https://www.iching.love/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.iching.love/atom.xml" />
@@ -20,11 +20,11 @@
             <title type="text">Hello World</title>
             <link rel="alternate" type="text/html" href="https://www.iching.love/posts/hello-world/" />
             <id>https://www.iching.love/posts/hello-world/</id>
-            <updated>2022-10-18T06:09:32&#43;00:00</updated>
+            <updated>2022-10-18T13:29:52&#43;00:00</updated>
             <published>2022-10-15T13:05:04&#43;08:00</published>
             <author>
                     <name>Mr.Z</name>
-                    <uri>https://www.iching.love</uri>
+                    <uri>https://www.iching.love/</uri>
                     <email>xuexizhuanyong147@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">My name is zsc, it is a test!</summary>
@@ -33,6 +33,18 @@
 </content>
             
             
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://www.iching.love/posts/" term="posts" label="posts" />
+                        
+                    
+                
             
             
             
