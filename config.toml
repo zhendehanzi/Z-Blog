@@ -267,7 +267,7 @@ uglyURLs = false
 
     # 首页的底部链接
     [[menu.home]]
-        pageref = "/home/"
+        pageref = "/about/"
         name = "Home"
         weight = 1
         pre = "internal"
