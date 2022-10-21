@@ -23,23 +23,20 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 20 Oct 2022 16:04:39 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 21 Oct 2022 04:50:10 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.iching.love/rss.xml" />
         
         
             <item>
-                <title>Hello World</title>
-                <link>https://www.iching.love/life/hello-world/</link>
-                <guid isPermaLink="true">https://www.iching.love/life/hello-world/</guid>
-                <pubDate>Sat, 15 Oct 2022 13:05:04 &#43;0800</pubDate>
+                <title>My Ideas</title>
+                <link>https://www.iching.love/idea/hello-world/</link>
+                <guid isPermaLink="true">https://www.iching.love/idea/hello-world/</guid>
+                <pubDate>Tue, 18 Oct 2022 21:42:58 &#43;0800</pubDate>
                 
-                    <author>xuexizhuanyong147@gmail.com (Mr.Z)</author>
                 
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;p&gt;My name is zsc, it is a test!&lt;/p&gt;
-</description>
+                    <description></description>
                 
                 
                 
@@ -50,7 +47,7 @@
                         
                         
                             
-                                <category domain="https://www.iching.love/life/">life</category>
+                                <category domain="https://www.iching.love/idea/">idea</category>
                             
                         
                     
