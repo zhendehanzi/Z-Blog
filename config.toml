@@ -368,7 +368,7 @@ uglyURLs = false
     homeVideoWebm = "/videos/Reflection Of Tree At Night.webm"
     homeVideoMp4 = "/videos/Reflection Of Tree At Night.mp4"
     homeLogo = "/icons/abstract.png"
-    homeLogoLink = "/about/"
+    homeLogoLink = "/idea/"
     homeTitle = "Mr.Z's Blog"
     homeMotto = "易·象·辞"
     homeDescription = ""
@@ -764,7 +764,7 @@ uglyURLs = false
     #      单位：em
 
     # 文章是否为原创（全局设置）
-    original = true
+    original = false
     # 说明：会影响文章的作者信息和版权信息
     #      文章的 Front Matter 中的 `original`
     #      的优先级高于此处
@@ -1103,7 +1103,7 @@ uglyURLs = false
     # 文章更新徽章
 
     # 是否开启
-    enablePostUpdatedBadge = true
+    enablePostUpdatedBadge = false
 
     # 是否显示（全局设置）
     displayUpdatedBadge = true
@@ -1277,7 +1277,7 @@ uglyURLs = false
     displayCopyrightSymbol = true
 
     # 是否显示站点的创建年份
-    displaySiteCreatedYear = true
+    displaySiteCreatedYear = false
 
     # 年份与作者之间的图标，留空（""）则无
     iconBetweenYearAndAuthor = "heart"
@@ -1287,7 +1287,7 @@ uglyURLs = false
     iconAnimation = true
 
     # 是否显示 Hugo 和 MemE 的链接
-    displayPoweredBy = true
+    displayPoweredBy = false
 
     # 是否显示站点的版权信息
     displaySiteCopyright = true
