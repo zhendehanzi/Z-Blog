@@ -10,7 +10,7 @@
         <title>Mr.Z&#39;s Blog</title>
         <link>https://www.iching.love/</link>
         <description>Mr.Z&#39;s Blog 一个分享技术、生活、创意和思考的个人博客</description>
-        <generator>Hugo 0.104.3 https://gohugo.io/</generator>
+        <generator>Hugo 0.107.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 21 Oct 2022 04:50:10 &#43;0000</lastBuildDate>
+        <lastBuildDate>Tue, 29 Nov 2022 08:33:47 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.iching.love/rss.xml" />
         
