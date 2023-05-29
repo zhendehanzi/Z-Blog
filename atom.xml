@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
     <title type="text">Mr.Z&#39;s Blog</title>
     <subtitle type="html">Mr.Z&#39;s Blog 一个分享技术、生活、创意和思考的个人博客</subtitle>
-    <updated>2023-05-29T06:06:42&#43;00:00</updated>
+    <updated>2023-05-29T06:18:33&#43;00:00</updated>
     <id>https://www.iching.love/</id>
     <link rel="alternate" type="text/html" href="https://www.iching.love/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.iching.love/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">20元打造一款智能摄像头</title>
             <link rel="alternate" type="text/html" href="https://www.iching.love/tech/make-a-smart-camera/" />
             <id>https://www.iching.love/tech/make-a-smart-camera/</id>
-            <updated>2023-05-29T06:06:40&#43;00:00</updated>
+            <updated>2023-05-29T06:18:32&#43;00:00</updated>
             <published>2023-05-27T09:53:44&#43;08:00</published>
             
             <summary type="html">前言 机缘巧合，接触到了一款性价比爆炸的硬件——ESP-CAM，一款搭载了OV2640……</summary>
@@ -1111,7 +1111,7 @@
 &lt;p&gt;​									（图片来源于网络，效果为AlphaPose模型加持）&lt;/p&gt;
 &lt;p&gt;跑题了，这边提供一个简单但是好用的算法，使用到的实现机器视觉的方法，也就是O pen CV与深度学习无关，目的是为了兼容像树莓派、旧PC之类的设备也可以轻松运行，以利用空闲计算机设备的算力，因此要用最简单的方式实现能令人满意的效果。&lt;/p&gt;
 &lt;p&gt;先看一段随手截取的GIF👇&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-09&#39;25&#39;2620235282084032.4q1brjibqfi0.gif&#34; alt=&#34;20230527-09&#39;25&#39;2620235282084032&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-09&#39;25&#39;26202352914134233.5hob00ogtro0.gif&#34; alt=&#34;20230527-09&#39;25&#39;26202352914134233&#34;&gt;&lt;/p&gt;
 &lt;p&gt;实现效果总结下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;主题是居家环境，那么主要就是入侵检测功能，当画面中有物体移动，实时进行标记&lt;/li&gt;
@@ -1699,7 +1699,7 @@
             <title type="text">onvif&#43;rtsp获取布控球视频流</title>
             <link rel="alternate" type="text/html" href="https://www.iching.love/tech/lab-getvideo/" />
             <id>https://www.iching.love/tech/lab-getvideo/</id>
-            <updated>2023-05-29T06:06:40&#43;00:00</updated>
+            <updated>2023-05-29T06:18:32&#43;00:00</updated>
             <published>2022-10-18T21:42:28&#43;08:00</published>
             
             <summary type="html">背景 最近正在做UWB与视觉融合定位相关的项目，使用的是购买的成品布控球设备，机芯型号……</summary>

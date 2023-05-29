@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 29 May 2023 06:06:42 &#43;0000</lastBuildDate>
+        <lastBuildDate>Mon, 29 May 2023 06:18:33 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.iching.love/rss.xml" />
         
@@ -1122,7 +1122,7 @@
 &lt;p&gt;​									（图片来源于网络，效果为AlphaPose模型加持）&lt;/p&gt;
 &lt;p&gt;跑题了，这边提供一个简单但是好用的算法，使用到的实现机器视觉的方法，也就是O pen CV与深度学习无关，目的是为了兼容像树莓派、旧PC之类的设备也可以轻松运行，以利用空闲计算机设备的算力，因此要用最简单的方式实现能令人满意的效果。&lt;/p&gt;
 &lt;p&gt;先看一段随手截取的GIF👇&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-09&#39;25&#39;2620235282084032.4q1brjibqfi0.gif&#34; alt=&#34;20230527-09&#39;25&#39;2620235282084032&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-09&#39;25&#39;26202352914134233.5hob00ogtro0.gif&#34; alt=&#34;20230527-09&#39;25&#39;26202352914134233&#34;&gt;&lt;/p&gt;
 &lt;p&gt;实现效果总结下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;主题是居家环境，那么主要就是入侵检测功能，当画面中有物体移动，实时进行标记&lt;/li&gt;
