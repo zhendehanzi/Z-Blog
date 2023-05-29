@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Mr.Z&#39;s Blog</title>
     <subtitle type="html">Mr.Z&#39;s Blog 一个分享技术、生活、创意和思考的个人博客</subtitle>
-    <updated>2023-05-29T11:53:37&#43;08:00</updated>
+    <updated>2023-05-29T13:33:42&#43;08:00</updated>
     <id>https://www.iching.love/</id>
     <link rel="alternate" type="text/html" href="https://www.iching.love/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.iching.love/atom.xml" />
@@ -18,8 +18,8 @@
     <generator uri="https://gohugo.io/" version="0.110.0">Hugo</generator>
         <entry>
             <title type="text">20元打造智能的居家监控器</title>
-            <link rel="alternate" type="text/html" href="https://www.iching.love/tech/20%E5%85%83%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E7%9A%84%E5%B1%85%E5%AE%B6%E7%9B%91%E6%8E%A7%E5%99%A8/" />
-            <id>https://www.iching.love/tech/20%E5%85%83%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E7%9A%84%E5%B1%85%E5%AE%B6%E7%9B%91%E6%8E%A7%E5%99%A8/</id>
+            <link rel="alternate" type="text/html" href="https://www.iching.love/tech/make-a-smart-camera/" />
+            <id>https://www.iching.love/tech/make-a-smart-camera/</id>
             <updated>2023-05-28T21:04:06&#43;08:00</updated>
             <published>2023-05-27T09:53:44&#43;08:00</published>
             
