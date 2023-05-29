@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
     <title type="text">Mr.Z&#39;s Blog</title>
     <subtitle type="html">Mr.Z&#39;s Blog 一个分享技术、生活、创意和思考的个人博客</subtitle>
-    <updated>2023-05-29T05:41:50&#43;00:00</updated>
+    <updated>2023-05-29T06:06:42&#43;00:00</updated>
     <id>https://www.iching.love/</id>
     <link rel="alternate" type="text/html" href="https://www.iching.love/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.iching.love/atom.xml" />
@@ -17,10 +17,10 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.112.4">Hugo</generator>
         <entry>
-            <title type="text">20元打造一款智能摄像头｜ESP-CAM|OpenCV</title>
+            <title type="text">20元打造一款智能摄像头</title>
             <link rel="alternate" type="text/html" href="https://www.iching.love/tech/make-a-smart-camera/" />
             <id>https://www.iching.love/tech/make-a-smart-camera/</id>
-            <updated>2023-05-29T05:41:48&#43;00:00</updated>
+            <updated>2023-05-29T06:06:40&#43;00:00</updated>
             <published>2023-05-27T09:53:44&#43;08:00</published>
             
             <summary type="html">前言 机缘巧合，接触到了一款性价比爆炸的硬件——ESP-CAM，一款搭载了OV2640……</summary>
@@ -1105,13 +1105,12 @@
 &lt;p&gt;&lt;strong&gt;固件由ESP-IDF5.0测试开发&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;机器视觉&#34;&gt;机器视觉&lt;/h2&gt;
-&lt;p&gt;ESP-CAM尽管在单片机中性能不俗，但是拿来跑机器视觉必备的OpenCV还是有点弱，尽管是可以的但会卡成PPT，况且如果遇到高阶玩法还需要自己编译相应的库。&lt;/p&gt;
-&lt;p&gt;最最最主要，自从ChatGPT掀起的&lt;strong&gt;AI&lt;/strong&gt;浪潮，既然拿到了视频流不得随便跑点模型，比如下面，图片随便从网上截的，加入了骨骼点识别。&lt;/p&gt;
+&lt;p&gt;ESP-CAM尽管在单片机中性能不俗，但是拿来跑机器视觉必备的OpenCV还是有点弱，况且，通过UDP把稳定的视频流传回来，怎么折腾可以有各种玩儿法。&lt;/p&gt;
+&lt;p&gt;比如，自从ChatGPT掀起的&lt;strong&gt;AI&lt;/strong&gt;浪潮，既然拿到了视频流不得随便跑点深度学习的AI模型，比如下面，图片随便从网上截的，加入了骨骼点识别模型，可以精准进行骨骼点的识别，再配合人体行为识别算法，等等一系列组合拳，就可以实现很多脑洞大开的玩儿法。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/%E9%AA%A8%E9%AA%BC%E7%82%B9%E8%AF%86%E5%88%AB.4m57nfr6iug0.webp&#34; alt=&#34;骨骼点识别&#34;&gt;&lt;/p&gt;
 &lt;p&gt;​									（图片来源于网络，效果为AlphaPose模型加持）&lt;/p&gt;
-&lt;p&gt;同样的，我们的ESP-CAM UDP推流，也可以很快速的接入很多主流的图像类深度学习模型中进行功能验证&lt;/p&gt;
-&lt;p&gt;跑题了，本次使用到的实现机器视觉的方法与深度学习无关，目的是为了兼容像树莓派、旧PC之类的设备也可以轻松运行，因此要用最简单的方式实现能令人满意的效果。&lt;/p&gt;
-&lt;p&gt;先看一段GIF&lt;/p&gt;
+&lt;p&gt;跑题了，这边提供一个简单但是好用的算法，使用到的实现机器视觉的方法，也就是O pen CV与深度学习无关，目的是为了兼容像树莓派、旧PC之类的设备也可以轻松运行，以利用空闲计算机设备的算力，因此要用最简单的方式实现能令人满意的效果。&lt;/p&gt;
+&lt;p&gt;先看一段随手截取的GIF👇&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-09&#39;25&#39;2620235282084032.4q1brjibqfi0.gif&#34; alt=&#34;20230527-09&#39;25&#39;2620235282084032&#34;&gt;&lt;/p&gt;
 &lt;p&gt;实现效果总结下：&lt;/p&gt;
 &lt;ul&gt;
@@ -1125,7 +1124,7 @@
 &lt;p&gt;24h视频的不间断保存&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/QQ20230528-202236@2x.5d1swlw5smg0.webp&#34; alt=&#34;QQ20230528-202236@2x&#34;&gt;&lt;/p&gt;
 &lt;p&gt;视频处理过程中，加入一些模糊化、扩张、缩减等处理，目的其实就是要对画面内容进行降噪，否则光线变化，以及图像噪声的会使得效果大打折扣，处理后便可以突显主体，这些步骤与其中的参数都要自己调整。&lt;/p&gt;
-&lt;p&gt;在判断jpeg图片的完整性中，用文件头和文件尾便可以进行巧妙的判断&lt;/p&gt;
+&lt;p&gt;在判断jpeg图片的完整性中，用文件头和文件尾便可以进行巧妙的判断，比如通过👇的0xff0xd80xff就可以识别jpeg图片包的开始，同理可以识别包尾，然后按顺序一拼接，图片帧就出来了。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1665,6 +1664,11 @@
 &lt;/div&gt;&lt;h2 id=&#34;文末&#34;&gt;文末&lt;/h2&gt;
 &lt;p&gt;ESP-CAM模块建议改成外置IPEX天线进行传输，板载的PCB天线受干扰很大，而且具有指向性，被遮挡太多会影响视频的传输，而外置天线无论是增益还是稳定性都提高太多。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20190811110257471.76rw59wshec0.webp&#34; alt=&#34;20190811110257471&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;致敬&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;科幻起源于想象，会预见未来，流浪地球2中550W超级计算机，说不定就会在若干年后成为现实，这个时代最大的魔法似乎就是即将实现的科学技术。&lt;/p&gt;
+&lt;p&gt;墨菲定律并非指的是那些变坏的事情必会发生…...而是指那些能够发生的事情，就会发生。&lt;/p&gt;
+&lt;p&gt;这次的ESP模块经过若干天测试，可以连续稳定的不间断运行，这也完成了本文的主题，简单好用，并且有那么一点点的智能，具有极强的可扩展性，👀。&lt;/p&gt;
 </content>
             
             
@@ -1695,7 +1699,7 @@
             <title type="text">onvif&#43;rtsp获取布控球视频流</title>
             <link rel="alternate" type="text/html" href="https://www.iching.love/tech/lab-getvideo/" />
             <id>https://www.iching.love/tech/lab-getvideo/</id>
-            <updated>2023-05-29T05:41:48&#43;00:00</updated>
+            <updated>2023-05-29T06:06:40&#43;00:00</updated>
             <published>2022-10-18T21:42:28&#43;08:00</published>
             
             <summary type="html">背景 最近正在做UWB与视觉融合定位相关的项目，使用的是购买的成品布控球设备，机芯型号……</summary>
