@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Mr.Z&#39;s Blog</title>
     <subtitle type="html">Mr.Z&#39;s Blog 一个分享技术、生活、创意和思考的个人博客</subtitle>
-    <updated>2023-05-29T13:33:42&#43;08:00</updated>
+    <updated>2023-05-29T13:40:58&#43;08:00</updated>
     <id>https://www.iching.love/</id>
     <link rel="alternate" type="text/html" href="https://www.iching.love/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.iching.love/atom.xml" />
@@ -17,10 +17,10 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.110.0">Hugo</generator>
         <entry>
-            <title type="text">20元打造智能的居家监控器</title>
+            <title type="text">20元打造一款智能摄像头｜ESP-CAM|OpenCV</title>
             <link rel="alternate" type="text/html" href="https://www.iching.love/tech/make-a-smart-camera/" />
             <id>https://www.iching.love/tech/make-a-smart-camera/</id>
-            <updated>2023-05-28T21:04:06&#43;08:00</updated>
+            <updated>2023-05-29T13:40:49&#43;08:00</updated>
             <published>2023-05-27T09:53:44&#43;08:00</published>
             
             <summary type="html">前言 机缘巧合，接触到了一款性价比爆炸的硬件——ESP-CAM，一款搭载了OV2640……</summary>

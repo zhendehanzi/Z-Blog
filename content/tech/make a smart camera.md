@@ -1,5 +1,5 @@
 ---
-title: "20元打造智能的居家监控器"
+title: "20元打造一款智能摄像头｜ESP-CAM|OpenCV"
 date: 2023-05-27T09:53:44+08:00
 draft: False
 ---
