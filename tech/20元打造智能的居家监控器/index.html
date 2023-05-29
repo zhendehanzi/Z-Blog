@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.112.4"><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>20元打造智能的居家监控器 | Mr.Z&#39;s Blog</title>
+
+    <link rel="stylesheet" href="/css/meme.min.2f58e6985baefdc2a93ceeeb912ce04fbc331a627bd4dbe591bbd23c7094ac9c.css"/>
+
+    
+    
+        <script src="/js/meme.min.e46abe484398824efc70edec3126437916974df592d7c395b44f8f60e0f57e9d.js"></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Mr.Z" /><meta name="description" content="前言 机缘巧合，接触到了一款性价比爆炸的硬件——ESP-CAM，一款搭载了OV2640……" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Mr.Z&#39;s Blog" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Mr.Z&#39;s Blog" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://www.iching.love/tech/20%E5%85%83%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E7%9A%84%E5%B1%85%E5%AE%B6%E7%9B%91%E6%8E%A7%E5%99%A8/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2023-05-27T09:53:44+08:00",
+        "dateModified": "2023-05-29T05:10:57+00:00",
+        "url": "https://www.iching.love/tech/20%E5%85%83%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E7%9A%84%E5%B1%85%E5%AE%B6%E7%9B%91%E6%8E%A7%E5%99%A8/",
+        "headline": "20元打造智能的居家监控器",
+        "description": "前言 机缘巧合，接触到了一款性价比爆炸的硬件——ESP-CAM，一款搭载了OV2640……",
+        "inLanguage" : "zh",
+        "articleSection": "tech",
+        "wordCount":  5040 ,
+        "image": ["https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/ESP-CAM-IPEX.1yhc2tvmiqsg.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/ESP-CAM.1bvq6rxaz21s.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/30FPS.31x361h9mgk0.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/%E7%9B%91%E6%8E%A7%E5%9B%BE.4emmsy166oa0.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/%E9%AA%A8%E9%AA%BC%E7%82%B9%E8%AF%86%E5%88%AB.4m57nfr6iug0.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-09'25'2620235282084032.4q1brjibqfi0.gif","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-08'25'26.1fwrjck1d3ls.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/QQ20230528-201836@2x.5h38fm7zk2o0.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/QQ20230528-202236@2x.5d1swlw5smg0.webp","https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20190811110257471.76rw59wshec0.webp"],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Mr.Z's Blog",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.iching.love/icons/apple-touch-icon.png"
+            },
+            "url": "https://www.iching.love"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://www.iching.love"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+    
+
+
+
+<meta property="og:title" content="20元打造智能的居家监控器" />
+<meta property="og:description" content="前言 机缘巧合，接触到了一款性价比爆炸的硬件——ESP-CAM，一款搭载了OV2640……" />
+<meta property="og:url" content="https://www.iching.love/tech/20%E5%85%83%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E7%9A%84%E5%B1%85%E5%AE%B6%E7%9B%91%E6%8E%A7%E5%99%A8/" />
+<meta property="og:site_name" content="Mr.Z&#39;s Blog" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/ESP-CAM-IPEX.1yhc2tvmiqsg.webp" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-05-27T09:53:44&#43;08:00" />
+    <meta property="article:modified_time" content="2023-05-29T05:10:57&#43;00:00" />
+    
+    <meta property="article:section" content="tech" />
+
+
+
+    
+    
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Mr.Z&#39;s Blog</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/life/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon home"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg><span class="menu-item-name">生活</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item active"><a href="/tech/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon link"><path d="M185.387 185.391c-59.747 59.809-58.927 155.698-.36 214.59.11.12.24.25.36.37l67.2 67.2c59.27 59.27 155.699 59.262 214.96 0 59.27-59.26 59.27-155.7 0-214.96l-37.106-37.106c-9.84-9.84-26.786-3.3-27.294 10.606-.648 17.722-3.826 35.527-9.69 52.721-1.986 5.822-.567 12.262 3.783 16.612l13.087 13.087c28.026 28.026 28.905 73.66 1.155 101.96-28.024 28.579-74.086 28.749-102.325.51l-67.2-67.19c-28.191-28.191-28.073-73.757 0-101.83 3.7-3.694 7.429-6.564 10.34-8.569a16.037 16.037 0 0 0 6.948-12.606c.396-10.567-3.348-21.456-11.698-29.806l-21.054-21.055c-5.521-5.521-14.182-6.199-20.584-1.731a152.482 152.482 0 0 0-20.522 17.197zM44.452 44.449c59.26-59.262 155.69-59.27 214.96 0l67.2 67.2c.12.12.25.25.36.37 58.566 58.892 59.387 154.781-.36 214.59a152.454 152.454 0 0 1-20.521 17.196c-6.402 4.468-15.064 3.789-20.584-1.731l-21.054-21.055c-8.35-8.35-12.094-19.239-11.698-29.806a16.037 16.037 0 0 1 6.947-12.606c2.912-2.005 6.64-4.875 10.34-8.569 28.074-28.073 28.192-73.639 0-101.83l-67.2-67.19c-28.238-28.239-74.3-28.069-102.324.51-27.75 28.3-26.872 73.934 1.155 101.96l13.087 13.087c4.35 4.35 5.769 10.79 3.783 16.612-5.864 17.194-9.042 34.999-9.69 52.721-.51 13.906-17.454 20.446-27.294 10.606l-37.106-37.106c-59.271-59.259-59.271-155.699-.001-214.959z"/></svg><span class="menu-item-name">技术</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/idea/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon pagelines"><path d="M384 312.7c-55.1 136.7-187.1 54-187.1 54-40.5 81.8-107.4 134.4-184.6 134.7-16.1 0-16.6-24.4 0-24.4 64.4-.3 120.5-42.7 157.2-110.1-41.1 15.9-118.6 27.9-161.6-82.2 109-44.9 159.1 11.2 178.3 45.5 9.9-24.4 17-50.9 21.6-79.7 0 0-139.7 21.9-149.5-98.1 119.1-47.9 152.6 76.7 152.6 76.7 1.6-16.7 3.3-52.6 3.3-53.4 0 0-106.3-73.7-38.1-165.2 124.6 43 61.4 162.4 61.4 162.4.5 1.6.5 23.8 0 33.4 0 0 45.2-89 136.4-57.5-4.2 134-141.9 106.4-141.9 106.4-4.4 27.4-11.2 53.4-20 77.5 0 0 83-91.8 172-20z"/></svg><span class="menu-item-name">想法</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon tags"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon user-circle"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="tech" data-toc-num="true">
+
+            <h1 class="post-title p-name">20元打造智能的居家监控器</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2023-05-27T09:53:44&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2023.5.27</time>
+    
+    
+        
+        <time datetime="2023-05-29T05:10:57&#43;00:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.5.29</time>
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                
+            
+            
+            
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/tech/" class="category-link p-category">Tech</a></span>
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;5040</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;11&nbsp;分钟</span>
+    
+    
+        
+            
+            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
+        
+    
+    
+</div>
+
+            
+
+            <div class="post-body e-content">
+                <p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/ESP-CAM-IPEX.1yhc2tvmiqsg.webp" alt="ESP-CAM-IPEX"></p>
+<h2 id="前言"><a href="#前言" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M185.387 185.391c-59.747 59.809-58.927 155.698-.36 214.59.11.12.24.25.36.37l67.2 67.2c59.27 59.27 155.699 59.262 214.96 0 59.27-59.26 59.27-155.7 0-214.96l-37.106-37.106c-9.84-9.84-26.786-3.3-27.294 10.606-.648 17.722-3.826 35.527-9.69 52.721-1.986 5.822-.567 12.262 3.783 16.612l13.087 13.087c28.026 28.026 28.905 73.66 1.155 101.96-28.024 28.579-74.086 28.749-102.325.51l-67.2-67.19c-28.191-28.191-28.073-73.757 0-101.83 3.7-3.694 7.429-6.564 10.34-8.569a16.037 16.037 0 0 0 6.948-12.606c.396-10.567-3.348-21.456-11.698-29.806l-21.054-21.055c-5.521-5.521-14.182-6.199-20.584-1.731a152.482 152.482 0 0 0-20.522 17.197zM44.452 44.449c59.26-59.262 155.69-59.27 214.96 0l67.2 67.2c.12.12.25.25.36.37 58.566 58.892 59.387 154.781-.36 214.59a152.454 152.454 0 0 1-20.521 17.196c-6.402 4.468-15.064 3.789-20.584-1.731l-21.054-21.055c-8.35-8.35-12.094-19.239-11.698-29.806a16.037 16.037 0 0 1 6.947-12.606c2.912-2.005 6.64-4.875 10.34-8.569 28.074-28.073 28.192-73.639 0-101.83l-67.2-67.19c-28.238-28.239-74.3-28.069-102.324.51-27.75 28.3-26.872 73.934 1.155 101.96l13.087 13.087c4.35 4.35 5.769 10.79 3.783 16.612-5.864 17.194-9.042 34.999-9.69 52.721-.51 13.906-17.454 20.446-27.294 10.606l-37.106-37.106c-59.271-59.259-59.271-155.699-.001-214.959z"/></svg></a>前言</h2>
+<p>机缘巧合，接触到了一款性价比爆炸的硬件——ESP-CAM，一款搭载了OV2640摄像头和ESP32-S的物联网模块，某宝20多元的售价，其中，ESP32板载支持Wi-Fi、蓝牙，双核240MHZ的MCU，还有4MB的PSRAM，拿来做无线摄像头再合适不过，OV2640还有200万像素，这么顶的配置还要什么自行车？</p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/ESP-CAM.1bvq6rxaz21s.webp" alt="ESP-CAM"></p>
+<p>于是，回归本文主题，通过ESP-CAM进行无线UDP串流，上位机接收，再通过Opencv-python完成机器视觉的功能，力求实现简洁、易用并可以高度定制化的智能监控。</p>
+<blockquote>
+<p><em><strong>全部代码均附在文中</strong></em></p>
+</blockquote>
+<h2 id="硬件核心固件"><a href="#硬件核心固件" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M185.387 185.391c-59.747 59.809-58.927 155.698-.36 214.59.11.12.24.25.36.37l67.2 67.2c59.27 59.27 155.699 59.262 214.96 0 59.27-59.26 59.27-155.7 0-214.96l-37.106-37.106c-9.84-9.84-26.786-3.3-27.294 10.606-.648 17.722-3.826 35.527-9.69 52.721-1.986 5.822-.567 12.262 3.783 16.612l13.087 13.087c28.026 28.026 28.905 73.66 1.155 101.96-28.024 28.579-74.086 28.749-102.325.51l-67.2-67.19c-28.191-28.191-28.073-73.757 0-101.83 3.7-3.694 7.429-6.564 10.34-8.569a16.037 16.037 0 0 0 6.948-12.606c.396-10.567-3.348-21.456-11.698-29.806l-21.054-21.055c-5.521-5.521-14.182-6.199-20.584-1.731a152.482 152.482 0 0 0-20.522 17.197zM44.452 44.449c59.26-59.262 155.69-59.27 214.96 0l67.2 67.2c.12.12.25.25.36.37 58.566 58.892 59.387 154.781-.36 214.59a152.454 152.454 0 0 1-20.521 17.196c-6.402 4.468-15.064 3.789-20.584-1.731l-21.054-21.055c-8.35-8.35-12.094-19.239-11.698-29.806a16.037 16.037 0 0 1 6.947-12.606c2.912-2.005 6.64-4.875 10.34-8.569 28.074-28.073 28.192-73.639 0-101.83l-67.2-67.19c-28.238-28.239-74.3-28.069-102.324.51-27.75 28.3-26.872 73.934 1.155 101.96l13.087 13.087c4.35 4.35 5.769 10.79 3.783 16.612-5.864 17.194-9.042 34.999-9.69 52.721-.51 13.906-17.454 20.446-27.294 10.606l-37.106-37.106c-59.271-59.259-59.271-155.699-.001-214.959z"/></svg></a>硬件核心固件</h2>
+<p>视频传输的核心是需要稳定流畅，且满足机器视觉处理。这样看来使用UDP协议进行串流再合适不过。</p>
+<p>UDP延迟低、不需要建立连接，占用资源也低。</p>
+<p>唯一问题是因为MTU（最大传输单元）的限制，接收到的数据包是一副完整图像的若干块，需要自行完成对于UDP图像帧数据包的辨识与拼接组合。</p>
+<p>这么看起来，万事有一利必有一弊，本项目经过实验，UDP利远远大于弊，没错是远远大于。经过调试优化后的固件在CIF分辨率(400x296)下的传输可以稳定达到60FPS（1s传输60帧图片），在VGA分辨率（640x480）下可以稳定在30FPS。再提高分辨率的话，大概会将帧率降低在15FPS左右</p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/30FPS.31x361h9mgk0.webp" alt="30FPS"></p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/%E7%9B%91%E6%8E%A7%E5%9B%BE.4emmsy166oa0.webp" alt="监控图"></p>
+<p>30FPS下的帧率和分辨率已经基本可以满足功能实现！</p>
+<p>现有的一些网上的ESP-CAM推流例程，大多是基于Arduino的开发，这种开发非常简单也是ESP原生的优势，不得不高呼国产单片机之光。</p>
+<p>但是，本项目还是选择ESP-IDF进行开发，原因也简单:</p>
+<ul>
+<li>嘿嘿嘿，就是玩儿！（啪啪打脸👏），为了学习！</li>
+<li>言归正传，Arduino的底层其实还是IDF，属于高级的API封装，浪费资源；</li>
+<li>IDF灵活性高，有很多IDF的API，Arduino没有；</li>
+<li>IDF原生支持的FreeRTOS开发，用起来也不会比Arduino复杂太多，并且容易上手</li>
+</ul>
+<p>综上所述，介绍下这部分代码</p>
+<p><em><strong>main.c</strong></em>是主程序代码，包含初始化Wi-Fi、开启camera的任务。</p>
+<p><em><strong>camera.c</strong></em>是摄像头相关固件，包含OV2640引脚与图像配置，兼容主流的几款ESP摄像头</p>
+<p><em><strong>Kconfig.projbuild</strong></em> 是预编译的sdkconfig文件，使用方法同IDF官方例程序</p>
+<p>其中, ESP使用的是STA模式，sdkconfig中需要首先配置Wi-Fi的SSID和密码（仅支持2.4GHZ频段的Wi-Fi，5GHZ不支持），并且需要注意在sdkconfig中开启PSRAM。</p>
+<p><em><strong>main.c</strong></em></p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;freertos/FreeRTOS.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;freertos/task.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;freertos/event_groups.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;esp_system.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;esp_wifi.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;esp_event.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;esp_log.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;nvs_flash.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;lwip/err.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;lwip/sys.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* The examples use WiFi configuration that you can set via project configuration menu
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">   If you&#39;d rather not, just change the below entries to strings with
+</span></span></span><span class="line"><span class="cl"><span class="cm">   the config you want - ie #define EXAMPLE_WIFI_SSID &#34;mywifissid&#34;
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define EXAMPLE_ESP_MAXIMUM_RETRY  CONFIG_ESP_MAXIMUM_RETRY
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* FreeRTOS event group to signal when we are connected*/</span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="n">EventGroupHandle_t</span> <span class="n">s_wifi_event_group</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* The event group allows multiple bits for each event, but we only care about two events:
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * - we are connected to the AP with an IP
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * - we failed to connect after the maximum amount of retries */</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define WIFI_CONNECTED_BIT BIT0
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define WIFI_FAIL_BIT      BIT1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">TAG</span> <span class="o">=</span> <span class="s">&#34;main&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">int</span> <span class="n">s_retry_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">event_handler</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">arg</span><span class="p">,</span> <span class="kt">esp_event_base_t</span> <span class="n">event_base</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="kt">int32_t</span> <span class="n">event_id</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">event_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">event_base</span> <span class="o">==</span> <span class="n">WIFI_EVENT</span> <span class="o">&amp;&amp;</span> <span class="n">event_id</span> <span class="o">==</span> <span class="n">WIFI_EVENT_STA_START</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">esp_wifi_connect</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">event_base</span> <span class="o">==</span> <span class="n">WIFI_EVENT</span> <span class="o">&amp;&amp;</span> <span class="n">event_id</span> <span class="o">==</span> <span class="n">WIFI_EVENT_STA_DISCONNECTED</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">s_retry_num</span> <span class="o">&lt;</span> <span class="n">EXAMPLE_ESP_MAXIMUM_RETRY</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">esp_wifi_connect</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s_retry_num</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;retry to connect to the AP&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">xEventGroupSetBits</span><span class="p">(</span><span class="n">s_wifi_event_group</span><span class="p">,</span> <span class="n">WIFI_FAIL_BIT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="s">&#34;connect to the AP fail&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">event_base</span> <span class="o">==</span> <span class="n">IP_EVENT</span> <span class="o">&amp;&amp;</span> <span class="n">event_id</span> <span class="o">==</span> <span class="n">IP_EVENT_STA_GOT_IP</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">ip_event_got_ip_t</span><span class="o">*</span> <span class="n">event</span> <span class="o">=</span> <span class="p">(</span><span class="kt">ip_event_got_ip_t</span><span class="o">*</span><span class="p">)</span> <span class="n">event_data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;got ip:&#34;</span> <span class="n">IPSTR</span><span class="p">,</span> <span class="nf">IP2STR</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="o">-&gt;</span><span class="n">ip_info</span><span class="p">.</span><span class="n">ip</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s_retry_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">xEventGroupSetBits</span><span class="p">(</span><span class="n">s_wifi_event_group</span><span class="p">,</span> <span class="n">WIFI_CONNECTED_BIT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">wifi_init_sta</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s_wifi_event_group</span> <span class="o">=</span> <span class="nf">xEventGroupCreate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_netif_init</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_event_loop_create_default</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">esp_netif_create_default_wifi_sta</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">wifi_init_config_t</span> <span class="n">cfg</span> <span class="o">=</span> <span class="nf">WIFI_INIT_CONFIG_DEFAULT</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_wifi_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cfg</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">esp_event_handler_instance_t</span> <span class="n">instance_any_id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">esp_event_handler_instance_t</span> <span class="n">instance_got_ip</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_event_handler_instance_register</span><span class="p">(</span><span class="n">WIFI_EVENT</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="n">ESP_EVENT_ANY_ID</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="o">&amp;</span><span class="n">event_handler</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="nb">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="o">&amp;</span><span class="n">instance_any_id</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_event_handler_instance_register</span><span class="p">(</span><span class="n">IP_EVENT</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="n">IP_EVENT_STA_GOT_IP</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="o">&amp;</span><span class="n">event_handler</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="nb">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                        <span class="o">&amp;</span><span class="n">instance_got_ip</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">wifi_config_t</span> <span class="n">wifi_config</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">sta</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">ssid</span> <span class="o">=</span> <span class="n">EXAMPLE_ESP_WIFI_SSID</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">EXAMPLE_ESP_WIFI_PASS</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="cm">/* Setting a password implies station will connect to all security modes including WEP/WPA.
+</span></span></span><span class="line"><span class="cl"><span class="cm">             * However these modes are deprecated and not advisable to be used. Incase your Access point
+</span></span></span><span class="line"><span class="cl"><span class="cm">             * doesn&#39;t support WPA2, these mode can be enabled by commenting below line */</span>
+</span></span><span class="line"><span class="cl">	     <span class="p">.</span><span class="n">threshold</span><span class="p">.</span><span class="n">authmode</span> <span class="o">=</span> <span class="n">WIFI_AUTH_WPA2_PSK</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="n">pmf_cfg</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">capable</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">required</span> <span class="o">=</span> <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_wifi_set_mode</span><span class="p">(</span><span class="n">WIFI_MODE_STA</span><span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_wifi_set_config</span><span class="p">(</span><span class="n">WIFI_IF_STA</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wifi_config</span><span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_wifi_start</span><span class="p">()</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;wifi_init_sta finished.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/* Waiting until either the connection is established (WIFI_CONNECTED_BIT) or connection failed for the maximum
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * number of re-tries (WIFI_FAIL_BIT). The bits are set by event_handler() (see above) */</span>
+</span></span><span class="line"><span class="cl">    <span class="n">EventBits_t</span> <span class="n">bits</span> <span class="o">=</span> <span class="nf">xEventGroupWaitBits</span><span class="p">(</span><span class="n">s_wifi_event_group</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">WIFI_CONNECTED_BIT</span> <span class="o">|</span> <span class="n">WIFI_FAIL_BIT</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pdFALSE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pdFALSE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">portMAX_DELAY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/* xEventGroupWaitBits() returns the bits before the call returned, hence we can test which event actually
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * happened. */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">bits</span> <span class="o">&amp;</span> <span class="n">WIFI_CONNECTED_BIT</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;connected to ap SSID:%s password:%s&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">EXAMPLE_ESP_WIFI_SSID</span><span class="p">,</span> <span class="n">EXAMPLE_ESP_WIFI_PASS</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">bits</span> <span class="o">&amp;</span> <span class="n">WIFI_FAIL_BIT</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Failed to connect to SSID:%s, password:%s&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">EXAMPLE_ESP_WIFI_SSID</span><span class="p">,</span> <span class="n">EXAMPLE_ESP_WIFI_PASS</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;UNEXPECTED EVENT&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cm">/* The event will not be processed after unregister */</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_event_handler_instance_unregister</span><span class="p">(</span><span class="n">IP_EVENT</span><span class="p">,</span> <span class="n">IP_EVENT_STA_GOT_IP</span><span class="p">,</span> <span class="n">instance_got_ip</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">esp_event_handler_instance_unregister</span><span class="p">(</span><span class="n">WIFI_EVENT</span><span class="p">,</span> <span class="n">ESP_EVENT_ANY_ID</span><span class="p">,</span> <span class="n">instance_any_id</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">vEventGroupDelete</span><span class="p">(</span><span class="n">s_wifi_event_group</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">esp_err_t</span> <span class="nf">init_camera</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">start_camera</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">app_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//Initialize NVS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">esp_err_t</span> <span class="n">ret</span> <span class="o">=</span> <span class="nf">nvs_flash_init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">==</span> <span class="n">ESP_ERR_NVS_NO_FREE_PAGES</span> <span class="o">||</span> <span class="n">ret</span> <span class="o">==</span> <span class="n">ESP_ERR_NVS_NEW_VERSION_FOUND</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="nf">nvs_flash_erase</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ret</span> <span class="o">=</span> <span class="nf">nvs_flash_init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_ERROR_CHECK</span><span class="p">(</span><span class="n">ret</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Init Camera&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">init_camera</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;ESP_WIFI_MODE_STA&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wifi_init_sta</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Start Camera&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">start_camera</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p><em><strong>camera.c</strong></em></p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;esp_log.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;esp_system.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;nvs_flash.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;sys/param.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;lwip/sockets.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;lwip/netdb.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;lwip/api.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;errno.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;freertos/FreeRTOS.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;freertos/task.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;esp_timer.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;esp_camera.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// support IDF 5.x
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#ifndef portTICK_RATE_MS
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define portTICK_RATE_MS portTICK_PERIOD_MS
+</span></span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#define CAMERA_MODEL_AI_THINKER
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ESPEYE-S3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#if defined(CAMERA_MODEL_ESPEYE_S3)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define PWDN_GPIO_NUM -1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define RESET_GPIO_NUM -1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define XCLK_GPIO_NUM 15
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define SIOD_GPIO_NUM 4
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define SIOC_GPIO_NUM 5
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Y9_GPIO_NUM 16
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y8_GPIO_NUM 17
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y7_GPIO_NUM 18
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y6_GPIO_NUM 12
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y5_GPIO_NUM 10
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y4_GPIO_NUM 8
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y3_GPIO_NUM 9
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y2_GPIO_NUM 11
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define VSYNC_GPIO_NUM 6
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define HREF_GPIO_NUM 7
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define PCLK_GPIO_NUM 13
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#elif defined(CAMERA_MODEL_AI_THINKER)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define PWDN_GPIO_NUM     32
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define RESET_GPIO_NUM    -1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define XCLK_GPIO_NUM      0
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define SIOD_GPIO_NUM     26
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define SIOC_GPIO_NUM     27
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Y9_GPIO_NUM       35
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y8_GPIO_NUM       34
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y7_GPIO_NUM       39
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y6_GPIO_NUM       36
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y5_GPIO_NUM       21
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y4_GPIO_NUM       19
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y3_GPIO_NUM       18
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y2_GPIO_NUM        5
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define VSYNC_GPIO_NUM    25
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define HREF_GPIO_NUM     23
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define PCLK_GPIO_NUM     22
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#elif defined(CAMERA_MODEL_ESPEYE)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define PWDN_GPIO_NUM     -1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define RESET_GPIO_NUM    -1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define XCLK_GPIO_NUM      4
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define SIOD_GPIO_NUM     18
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define SIOC_GPIO_NUM     23
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  
+</span></span><span class="line"><span class="cl">  <span class="cp">#define Y9_GPIO_NUM       36
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y8_GPIO_NUM       37
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y7_GPIO_NUM       38
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y6_GPIO_NUM       39
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y5_GPIO_NUM       35
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y4_GPIO_NUM       14
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y3_GPIO_NUM       13
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define Y2_GPIO_NUM       34
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define VSYNC_GPIO_NUM    5
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define HREF_GPIO_NUM     27
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#define PCLK_GPIO_NUM     25
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="cp">#error &#34;Camera model not selected&#34;
+</span></span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">TAG</span> <span class="o">=</span> <span class="s">&#34;camera&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">esp_err_t</span> <span class="nf">init_camera</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">camera_config_t</span> <span class="n">config</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">ledc_channel</span> <span class="o">=</span> <span class="n">LEDC_CHANNEL_0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">ledc_timer</span> <span class="o">=</span> <span class="n">LEDC_TIMER_0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d0</span> <span class="o">=</span> <span class="n">Y2_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d1</span> <span class="o">=</span> <span class="n">Y3_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d2</span> <span class="o">=</span> <span class="n">Y4_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d3</span> <span class="o">=</span> <span class="n">Y5_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d4</span> <span class="o">=</span> <span class="n">Y6_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d5</span> <span class="o">=</span> <span class="n">Y7_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d6</span> <span class="o">=</span> <span class="n">Y8_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_d7</span> <span class="o">=</span> <span class="n">Y9_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_xclk</span> <span class="o">=</span> <span class="n">XCLK_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_pclk</span> <span class="o">=</span> <span class="n">PCLK_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_vsync</span> <span class="o">=</span> <span class="n">VSYNC_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_href</span> <span class="o">=</span> <span class="n">HREF_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_sscb_sda</span> <span class="o">=</span> <span class="n">SIOD_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_sscb_scl</span> <span class="o">=</span> <span class="n">SIOC_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_pwdn</span> <span class="o">=</span> <span class="n">PWDN_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">pin_reset</span> <span class="o">=</span> <span class="n">RESET_GPIO_NUM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">xclk_freq_hz</span> <span class="o">=</span> <span class="mi">24000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// config.xclk_freq_hz = 36000000;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">config</span><span class="p">.</span><span class="n">pixel_format</span> <span class="o">=</span> <span class="n">PIXFORMAT_JPEG</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// config.frame_size = FRAMESIZE_QVGA; // 320 * 240 / 5 = 15,360 &lt; 32,768
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// config.frame_size = FRAMESIZE_CIF; // 400 * 296 / 5 = 23,680 &lt; 32,768
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">config</span><span class="p">.</span><span class="n">frame_size</span> <span class="o">=</span> <span class="n">FRAMESIZE_VGA</span><span class="p">;</span> <span class="c1">// 480 * 320 / 5 = 30,720 &lt; 32,768
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">config</span><span class="p">.</span><span class="n">jpeg_quality</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">fb_count</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">fb_location</span> <span class="o">=</span> <span class="n">CAMERA_FB_IN_PSRAM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">config</span><span class="p">.</span><span class="n">grab_mode</span> <span class="o">=</span> <span class="n">CAMERA_GRAB_LATEST</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">fragment_mode</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">config</span><span class="p">.</span><span class="n">zero_padding</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// camera init
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">esp_err_t</span> <span class="n">err</span> <span class="o">=</span> <span class="nf">esp_camera_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">config</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">!=</span> <span class="n">ESP_OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Camera Init Failed error 0x%x&#34;</span><span class="p">,</span> <span class="n">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">sensor_t</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="nf">esp_camera_sensor_get</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// drop down frame size for higher initial frame rate
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">s</span><span class="o">-&gt;</span><span class="nf">set_framesize</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">FRAMESIZE_VGA</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// s-&gt;set_framesize(s, FRAMESIZE_QVGA);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// s-&gt;set_framesize(s, FRAMESIZE_VGA);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// s-&gt;set_framesize(s, FRAMESIZE_XGA);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// s-&gt;set_framesize(s, FRAMESIZE_HD);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// s-&gt;set_framesize(s, FRAMESIZE_SXGA);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ESP_OK</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#define USE_NETCONN 1
+</span></span></span><span class="line"><span class="cl"><span class="cp">#if USE_NETCONN
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">struct</span> <span class="n">netconn</span> <span class="o">*</span><span class="n">camera_conn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">ip_addr</span> <span class="n">peer_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">static</span> <span class="kt">int</span> <span class="n">camera_sock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="k">struct</span> <span class="n">sockaddr_in</span> <span class="n">senderinfo</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">camera_tx</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">param</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">size_t</span> <span class="n">packet_max</span> <span class="o">=</span> <span class="mi">32768</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#if USE_NETCONN
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="k">struct</span> <span class="n">netbuf</span> <span class="o">*</span><span class="n">txbuf</span> <span class="o">=</span> <span class="nf">netbuf_new</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="n">senderinfo</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="nf">htons</span><span class="p">(</span><span class="mi">55556</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint32_t</span> <span class="n">frame_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint32_t</span> <span class="n">frame_size_sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int64_t</span> <span class="n">start</span> <span class="o">=</span> <span class="nf">esp_timer_get_time</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">camera_fb_t</span> <span class="o">*</span><span class="n">fb</span> <span class="o">=</span> <span class="nf">esp_camera_fb_get</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">fb</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Camera capture failed&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">buf</span> <span class="o">=</span> <span class="n">fb</span><span class="o">-&gt;</span><span class="n">buf</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">size_t</span> <span class="n">total</span> <span class="o">=</span> <span class="n">fb</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">size_t</span> <span class="n">send</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ESP_LOGI(TAG, &#34;send %d&#34;, total);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(;</span> <span class="n">send</span> <span class="o">&lt;</span> <span class="n">total</span><span class="p">;)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">size_t</span> <span class="n">txlen</span> <span class="o">=</span> <span class="n">total</span> <span class="o">-</span> <span class="n">send</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">txlen</span> <span class="o">&gt;</span> <span class="n">packet_max</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">txlen</span> <span class="o">=</span> <span class="n">packet_max</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#if USE_NETCONN
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>            <span class="kt">err_t</span> <span class="n">err</span> <span class="o">=</span> <span class="nf">netbuf_ref</span><span class="p">(</span><span class="n">txbuf</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">buf</span><span class="p">[</span><span class="n">send</span><span class="p">],</span> <span class="n">txlen</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">==</span> <span class="n">ERR_OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">err</span> <span class="o">=</span> <span class="nf">netconn_sendto</span><span class="p">(</span><span class="n">camera_conn</span><span class="p">,</span> <span class="n">txbuf</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">peer_addr</span><span class="p">,</span> <span class="mi">55556</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">==</span> <span class="n">ERR_OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">send</span> <span class="o">+=</span> <span class="n">txlen</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">==</span> <span class="n">ERR_MEM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nf">ESP_LOGW</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;netconn_sendto ERR_MEM&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="nf">vTaskDelay</span><span class="p">(</span><span class="nf">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;netconn_sendto err %d&#34;</span><span class="p">,</span> <span class="n">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;netbuf_ref err %d&#34;</span><span class="p">,</span> <span class="n">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>            <span class="kt">int</span> <span class="n">err</span> <span class="o">=</span> <span class="nf">sendto</span><span class="p">(</span><span class="n">camera_sock</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">buf</span><span class="p">[</span><span class="n">send</span><span class="p">],</span> <span class="n">txlen</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">senderinfo</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">senderinfo</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Error occurred during sending: errno %d&#34;</span><span class="p">,</span> <span class="n">errno</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">errno</span> <span class="o">==</span> <span class="n">ENOMEM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nf">vTaskDelay</span><span class="p">(</span><span class="nf">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">send</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">vTaskDelay</span><span class="p">(</span><span class="nf">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">send</span> <span class="o">+=</span> <span class="n">err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nf">esp_camera_fb_return</span><span class="p">(</span><span class="n">fb</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mh">0xff</span> <span class="o">&amp;&amp;</span> <span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mh">0xd8</span> <span class="o">&amp;&amp;</span> <span class="n">buf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mh">0xff</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">frame_count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame_size_sum</span> <span class="o">+=</span> <span class="n">total</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">int64_t</span> <span class="n">end</span> <span class="o">=</span> <span class="nf">esp_timer_get_time</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int64_t</span> <span class="n">pasttime</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">pasttime</span> <span class="o">&gt;</span> <span class="mi">1000000</span><span class="p">)</span> <span class="c1">//如果pasttime超过1秒
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">start</span> <span class="o">=</span> <span class="n">end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">float</span> <span class="n">adj</span> <span class="o">=</span> <span class="mf">1000000.0</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">pasttime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">float</span> <span class="n">mbps</span> <span class="o">=</span> <span class="p">(</span><span class="n">frame_size_sum</span> <span class="o">*</span> <span class="mf">8.0</span> <span class="o">*</span> <span class="n">adj</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1024.0</span> <span class="o">/</span> <span class="mf">1024.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;%.1f fps %.3f Mbps&#34;</span><span class="p">,</span> <span class="n">frame_count</span> <span class="o">*</span> <span class="n">adj</span><span class="p">,</span> <span class="n">mbps</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">frame_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">frame_size_sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nf">vTaskDelay</span><span class="p">(</span><span class="nf">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">start_camera</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#if USE_NETCONN
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="n">camera_conn</span> <span class="o">=</span> <span class="nf">netconn_new</span><span class="p">(</span><span class="n">NETCONN_UDP</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">camera_conn</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;netconn_new err&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">err_t</span> <span class="n">err</span> <span class="o">=</span> <span class="nf">netconn_bind</span><span class="p">(</span><span class="n">camera_conn</span><span class="p">,</span> <span class="n">IPADDR_ANY</span><span class="p">,</span> <span class="mi">55555</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">!=</span> <span class="n">ERR_OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;netconn_bind err %d&#34;</span><span class="p">,</span> <span class="n">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">netconn_delete</span><span class="p">(</span><span class="n">camera_conn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Wait a trigger...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">struct</span> <span class="n">netbuf</span> <span class="o">*</span><span class="n">rxbuf</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">err</span> <span class="o">=</span> <span class="nf">netconn_recv</span><span class="p">(</span><span class="n">camera_conn</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rxbuf</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">==</span> <span class="n">ERR_OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">u16_t</span> <span class="n">len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">netbuf_data</span><span class="p">(</span><span class="n">rxbuf</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">len</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;netconn_recv %d&#34;</span><span class="p">,</span> <span class="n">len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mh">0x55</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">peer_addr</span> <span class="o">=</span> <span class="o">*</span><span class="nf">netbuf_fromaddr</span><span class="p">(</span><span class="n">rxbuf</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;peer %x&#34;</span><span class="p">,</span> <span class="n">peer_addr</span><span class="p">.</span><span class="n">u_addr</span><span class="p">.</span><span class="n">ip4</span><span class="p">.</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Trigged!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="nf">netbuf_delete</span><span class="p">(</span><span class="n">rxbuf</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">netbuf_delete</span><span class="p">(</span><span class="n">rxbuf</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">vTaskDelay</span><span class="p">(</span><span class="nf">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="n">camera_sock</span> <span class="o">=</span> <span class="nf">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_DGRAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">camera_sock</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGE</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Unable to create socket: errno %d&#34;</span><span class="p">,</span> <span class="n">errno</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">sockaddr_in</span> <span class="n">addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">addr</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">addr</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="nf">htons</span><span class="p">(</span><span class="mi">55555</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">addr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span> <span class="o">=</span> <span class="n">INADDR_ANY</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">bind</span><span class="p">(</span><span class="n">camera_sock</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">addr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">addr</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">socklen_t</span> <span class="n">addrlen</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">senderinfo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;Wait a trigger...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="nf">recvfrom</span><span class="p">(</span><span class="n">camera_sock</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">senderinfo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">addrlen</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mh">0x55</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&#34;recvfrom %d&#34;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="nf">xTaskCreatePinnedToCore</span><span class="p">(</span><span class="o">&amp;</span><span class="n">camera_tx</span><span class="p">,</span> <span class="s">&#34;camera_tx&#34;</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">tskNO_AFFINITY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p><em><strong>Kconfig.projbuild</strong></em></p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">menu</span> <span class="s">&#34;Example Configuration&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">config</span> <span class="n">ESP_WIFI_SSID</span>
+</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="s">&#34;WiFi SSID&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span> <span class="s">&#34;myssid&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">help</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">SSID</span> <span class="p">(</span><span class="n">network</span> <span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">the</span> <span class="n">example</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">config</span> <span class="n">ESP_WIFI_PASSWORD</span>
+</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="s">&#34;WiFi Password&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span> <span class="s">&#34;mypassword&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">help</span>
+</span></span><span class="line"><span class="cl">            <span class="n">WiFi</span> <span class="nf">password</span> <span class="p">(</span><span class="n">WPA</span> <span class="n">or</span> <span class="n">WPA2</span><span class="p">)</span> <span class="k">for</span> <span class="n">the</span> <span class="n">example</span> <span class="n">to</span> <span class="n">use</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">config</span> <span class="n">ESP_MAXIMUM_RETRY</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="s">&#34;Maximum retry&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">        <span class="n">help</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Set</span> <span class="n">the</span> <span class="n">Maximum</span> <span class="n">retry</span> <span class="n">to</span> <span class="n">avoid</span> <span class="n">station</span> <span class="n">reconnecting</span> <span class="n">to</span> <span class="n">the</span> <span class="n">AP</span> <span class="n">unlimited</span> <span class="n">when</span> <span class="n">the</span> <span class="n">AP</span> <span class="n">is</span> <span class="n">really</span> <span class="n">inexistent</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">endmenu</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><blockquote>
+<p><strong>固件由ESP-IDF5.0测试开发</strong></p>
+</blockquote>
+<h2 id="机器视觉"><a href="#机器视觉" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M185.387 185.391c-59.747 59.809-58.927 155.698-.36 214.59.11.12.24.25.36.37l67.2 67.2c59.27 59.27 155.699 59.262 214.96 0 59.27-59.26 59.27-155.7 0-214.96l-37.106-37.106c-9.84-9.84-26.786-3.3-27.294 10.606-.648 17.722-3.826 35.527-9.69 52.721-1.986 5.822-.567 12.262 3.783 16.612l13.087 13.087c28.026 28.026 28.905 73.66 1.155 101.96-28.024 28.579-74.086 28.749-102.325.51l-67.2-67.19c-28.191-28.191-28.073-73.757 0-101.83 3.7-3.694 7.429-6.564 10.34-8.569a16.037 16.037 0 0 0 6.948-12.606c.396-10.567-3.348-21.456-11.698-29.806l-21.054-21.055c-5.521-5.521-14.182-6.199-20.584-1.731a152.482 152.482 0 0 0-20.522 17.197zM44.452 44.449c59.26-59.262 155.69-59.27 214.96 0l67.2 67.2c.12.12.25.25.36.37 58.566 58.892 59.387 154.781-.36 214.59a152.454 152.454 0 0 1-20.521 17.196c-6.402 4.468-15.064 3.789-20.584-1.731l-21.054-21.055c-8.35-8.35-12.094-19.239-11.698-29.806a16.037 16.037 0 0 1 6.947-12.606c2.912-2.005 6.64-4.875 10.34-8.569 28.074-28.073 28.192-73.639 0-101.83l-67.2-67.19c-28.238-28.239-74.3-28.069-102.324.51-27.75 28.3-26.872 73.934 1.155 101.96l13.087 13.087c4.35 4.35 5.769 10.79 3.783 16.612-5.864 17.194-9.042 34.999-9.69 52.721-.51 13.906-17.454 20.446-27.294 10.606l-37.106-37.106c-59.271-59.259-59.271-155.699-.001-214.959z"/></svg></a>机器视觉</h2>
+<p>ESP-CAM尽管在单片机中性能不俗，但是拿来跑机器视觉必备的OpenCV还是有点弱，尽管是可以的但会卡成PPT，况且如果遇到高阶玩法还需要自己编译相应的库。</p>
+<p>最最最主要，自从ChatGPT掀起的<strong>AI</strong>浪潮，既然拿到了视频流不得随便跑点模型，比如下面，图片随便从网上截的，加入了骨骼点识别。</p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/%E9%AA%A8%E9%AA%BC%E7%82%B9%E8%AF%86%E5%88%AB.4m57nfr6iug0.webp" alt="骨骼点识别"></p>
+<p>​									（图片来源于网络，效果为AlphaPose模型加持）</p>
+<p>同样的，我们的ESP-CAM UDP推流，也可以很快速的接入很多主流的图像类深度学习模型中进行功能验证</p>
+<p>跑题了，本次使用到的实现机器视觉的方法与深度学习无关，目的是为了兼容像树莓派、旧PC之类的设备也可以轻松运行，因此要用最简单的方式实现能令人满意的效果。</p>
+<p>先看一段GIF</p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-09'25'2620235282084032.4q1brjibqfi0.gif" alt="20230527-09'25'2620235282084032"></p>
+<p>实现效果总结下：</p>
+<ul>
+<li>主题是居家环境，那么主要就是入侵检测功能，当画面中有物体移动，实时进行标记</li>
+<li>自动截取移动的物体图片，保存在指定目录下，配合MQTT可以快速实现一键消息推送</li>
+<li>24h的不间断智能监控预警，并定时清除旧文件，释放磁盘内存</li>
+</ul>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20230527-08'25'26.1fwrjck1d3ls.webp" alt="20230527-08'25'26"></p>
+<p>自动截取移动物体并保存</p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/QQ20230528-201836@2x.5h38fm7zk2o0.webp" alt="QQ20230528-201836@2x"></p>
+<p>24h视频的不间断保存</p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/QQ20230528-202236@2x.5d1swlw5smg0.webp" alt="QQ20230528-202236@2x"></p>
+<p>视频处理过程中，加入一些模糊化、扩张、缩减等处理，目的其实就是要对画面内容进行降噪，否则光线变化，以及图像噪声的会使得效果大打折扣，处理后便可以突显主体，这些步骤与其中的参数都要自己调整。</p>
+<p>在判断jpeg图片的完整性中，用文件头和文件尾便可以进行巧妙的判断</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Start Marker  | JFIF Marker | Header Length | Identifier
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">0xff, 0xd8    | 0xff, 0xe0  |    2-bytes    | &#34;JFIF\0&#34;
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">cv2</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">socket</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">queue</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">traceback</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">datetime</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">frame_q</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">runing</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">is_dark_environment</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 将帧转换为灰度图像</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 计算灰度图像的平均亮度</span>
+</span></span><span class="line"><span class="cl">    <span class="n">average_brightness</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">gray</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 判断平均亮度是否低于阈值</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">average_brightness</span> <span class="o">&lt;</span> <span class="n">threshold</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">keep_latest_files</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">num_to_keep</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;保留指定数量的最新文件。
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        folder_path (str): 文件夹路径。
+</span></span></span><span class="line"><span class="cl"><span class="s2">        num_to_keep (int): 要保留的文件数量。
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        None
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 遍历文件夹</span>
+</span></span><span class="line"><span class="cl">    <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 获取每个文件的创建时间</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file_times</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">file_time</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getctime</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">file_times</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">file_path</span><span class="p">,</span> <span class="n">file_time</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 按创建时间排序</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file_times</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 删除最早保存的文件</span>
+</span></span><span class="line"><span class="cl">    <span class="n">num_to_delete</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">file_times</span><span class="p">)</span> <span class="o">-</span> <span class="n">num_to_keep</span>  <span class="c1"># 要删除的文件数量</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_to_delete</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">file_path</span> <span class="o">=</span> <span class="n">file_times</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">udp_recv</span><span class="p">(</span><span class="n">listen_addr</span><span class="p">,</span> <span class="n">target_addr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sock</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">listen_addr</span><span class="p">,</span> <span class="mi">55556</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Start Streaming...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">chunks</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">runing</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">msg</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># print(&#39;sock.recvfrom&#39;,e)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sock</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x55</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">target_addr</span><span class="p">,</span> <span class="mi">55555</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">        <span class="n">soi</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xd8\xff</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># 返回第一次出现的位置，没有匹配返回-1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">eoi</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xd9</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># 返回最后一次出现的位置</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(time.perf_counter(), len(msg), soi, eoi, msg[:2], msg[-2:])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">soi</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">chunks</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xd8\xff</span><span class="s1">&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">eoi</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">chunks</span> <span class="o">+=</span> <span class="n">msg</span><span class="p">[:</span><span class="n">eoi</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># print(time.perf_counter(), &#34;Complete picture&#34;)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">eoi</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">chunks</span> <span class="o">+=</span> <span class="n">msg</span><span class="p">[:</span><span class="n">soi</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># print(time.perf_counter(), &#34;Incomplete picture&#34;)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">frame_q</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">chunks</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="n">soi</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">chunks</span> <span class="o">+=</span> <span class="n">msg</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">eoi</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">eob</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="o">+</span> <span class="n">eoi</span> <span class="o">+</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">chunks</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xd8\xff</span><span class="s1">&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">byte_frame</span> <span class="o">=</span> <span class="n">chunks</span><span class="p">[:</span><span class="n">eob</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># print(time.perf_counter(), &#34;Complete picture&#34;)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">frame_q</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">byte_frame</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">(),</span> <span class="s2">&#34;Invalid picture&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">chunks</span> <span class="o">=</span> <span class="n">chunks</span><span class="p">[</span><span class="n">eob</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Stop Streaming&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">runing</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">udp_recv</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">listen_ip</span><span class="p">,</span> <span class="n">target_ip</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">winname</span> <span class="o">=</span> <span class="s1">&#39;frame&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">if_fullscreen</span> <span class="ow">and</span> <span class="n">if_videoshow</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cv2</span><span class="o">.</span><span class="n">namedWindow</span><span class="p">(</span><span class="n">winname</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">WINDOW_NORMAL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cv2</span><span class="o">.</span><span class="n">setWindowProperty</span><span class="p">(</span><span class="n">winname</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">WND_PROP_FULLSCREEN</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">WINDOW_FULLSCREEN</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">writer</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">img</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">next_write</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inital_flag</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="n">start_file_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">current_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">if_write</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="ow">not</span> <span class="n">frame_q</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">img</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">img</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">img</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">byte_frame</span> <span class="o">=</span> <span class="n">frame_q</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">frame_q</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span> <span class="ow">or</span> <span class="n">grab_all</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># print(time.perf_counter(), &#39;Skip picture&#39;)</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># print(time.perf_counter(), &#39;Decode picture&#39;)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imdecode</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">byte_frame</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">inital_flag</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 初始化平均影像</span>
+</span></span><span class="line"><span class="cl">                <span class="n">avg</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">blur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="n">avg_float</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">inital_flag</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">                <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 判断是否到达指定时间间隔</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">current_time</span> <span class="o">-</span> <span class="n">start_file_time</span> <span class="o">&gt;=</span> <span class="n">file_detect_interval</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 执行文件删除</span>
+</span></span><span class="line"><span class="cl">                <span class="n">keep_latest_files</span><span class="p">(</span><span class="s2">&#34;videos_record&#34;</span><span class="p">,</span> <span class="n">keep_recordvideo_nums</span><span class="p">)</span>  <span class="c1"># 删除早期的视频视频</span>
+</span></span><span class="line"><span class="cl">                <span class="n">keep_latest_files</span><span class="p">(</span><span class="s2">&#34;motion_record&#34;</span><span class="p">,</span> <span class="n">keep_motionjpg_nums</span><span class="p">)</span>  <span class="c1"># 删除早期的图像文件</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;执行文件清理！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 更新起始时间戳</span>
+</span></span><span class="line"><span class="cl">                <span class="n">start_file_time</span> <span class="o">=</span> <span class="n">current_time</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 模糊处理</span>
+</span></span><span class="line"><span class="cl">            <span class="n">blur</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">blur</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 计算目前影格与平均影像的差异值</span>
+</span></span><span class="line"><span class="cl">            <span class="n">diff</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">absdiff</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="n">blur</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 将图片转为灰阶</span>
+</span></span><span class="line"><span class="cl">            <span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 筛选出变动程度大于门槛值的区域</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ret</span><span class="p">,</span> <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">THRESH_BINARY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 使用型态转换函数去除杂讯</span>
+</span></span><span class="line"><span class="cl">            <span class="n">kernel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">thresh</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_OPEN</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">thresh</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_CLOSE</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 产生等高线</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cnts</span><span class="p">,</span> <span class="n">cntImg</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">thresh</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">img_copy</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cnts</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 忽略太小的区域</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">contourArea</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2500</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="c1"># 计算等高线的外框范围</span>
+</span></span><span class="line"><span class="cl">                <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="c1"># 画出外框</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">img_copy</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="c1"># 侦测到物体，可以自己加上处理的程式码在这里...</span>
+</span></span><span class="line"><span class="cl">                <span class="n">nowtime</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y%m</span><span class="si">%d</span><span class="s2">-%H&#39;%M&#39;%S&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">motion_record_path</span> <span class="o">=</span> <span class="s2">&#34;motion_record&#34;</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="n">nowtime</span> <span class="o">+</span> <span class="s2">&#34;.jpg&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">motion_record_path</span><span class="p">,</span> <span class="n">img_copy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34; </span><span class="si">{</span><span class="n">nowtime</span><span class="si">}</span><span class="s2"> ,saved motion warning image!!!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 画出等高线（除错用）</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cv2</span><span class="o">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img_copy</span><span class="p">,</span> <span class="n">cnts</span><span class="p">,</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">font</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">FONT_HERSHEY_SIMPLEX</span>
+</span></span><span class="line"><span class="cl">            <span class="n">position</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>  <span class="c1"># 左上角坐标</span>
+</span></span><span class="line"><span class="cl">            <span class="n">font_size</span> <span class="o">=</span> <span class="mf">0.7</span>
+</span></span><span class="line"><span class="cl">            <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>  <span class="c1"># 白色</span>
+</span></span><span class="line"><span class="cl">            <span class="n">thickness</span> <span class="o">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="n">date_once</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2">&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span> <span class="o">+</span> <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%H:%M:%S&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cv2</span><span class="o">.</span><span class="n">putText</span><span class="p">(</span><span class="n">img_copy</span><span class="p">,</span> <span class="n">date_once</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">font_size</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">if_write</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">writer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">fourcc</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter_fourcc</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">)</span>  <span class="c1"># 编码参数</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">write_path</span> <span class="o">=</span> <span class="s2">&#34;videos_record&#34;</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span> <span class="o">+</span> <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y%m</span><span class="si">%d</span><span class="s2">-%H&#39;%M&#39;%S&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;.mp4&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">writer</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">write_path</span><span class="p">,</span> <span class="n">fourcc</span><span class="p">,</span> <span class="n">set_fps</span><span class="p">,</span> <span class="p">(</span><span class="n">img_copy</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">img_copy</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>  <span class="c1">#</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">start_write_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">next_write</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">next_write</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">set_fps</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># print(time.perf_counter(), &#39;Write picture&#39;)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">img_copy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_write_time</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">writer</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">writer</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">if_videoshow</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 显示侦测结果影像</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39; frame &#39;</span><span class="p">,</span> <span class="n">img_copy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 更新平均影像</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cv2</span><span class="o">.</span><span class="n">accumulateWeighted</span><span class="p">(</span><span class="n">blur</span><span class="p">,</span> <span class="n">avg_float</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">avg</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">convertScaleAbs</span><span class="p">(</span><span class="n">avg_float</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="n">queue</span><span class="o">.</span><span class="n">Empty</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;KeyboardInterrupt&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">writer</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">writer</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Waiting for recv thread to end&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">runing</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="n">thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">listen_ip</span> <span class="o">=</span> <span class="s2">&#34;192.168.x.xxx&#34;</span> <span class="c1"># 上位机IP地址</span>
+</span></span><span class="line"><span class="cl">    <span class="n">target_ip</span> <span class="o">=</span> <span class="s2">&#34;192.168.x.xxx&#34;</span> <span class="c1"># ESP-CAM IP地址</span>
+</span></span><span class="line"><span class="cl">    <span class="n">if_videoshow</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># 是否开始实时显示</span>
+</span></span><span class="line"><span class="cl">    <span class="n">if_fullscreen</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># 是否全屏显示</span>
+</span></span><span class="line"><span class="cl">    <span class="n">if_write</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># 是否开启写入</span>
+</span></span><span class="line"><span class="cl">    <span class="n">set_fps</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># 视频文件写入的FPS</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grab_all</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># False是取队列所有</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        文件存储相关配置
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file_detect_interval</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span>  <span class="c1"># 定时检查清理文件夹内容</span>
+</span></span><span class="line"><span class="cl">    <span class="n">keep_recordvideo_nums</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">24</span>  <span class="c1"># 保留记录视频的个数，1h1个</span>
+</span></span><span class="line"><span class="cl">    <span class="n">keep_motionjpg_nums</span> <span class="o">=</span> <span class="mi">10000</span>  <span class="c1"># 保留移动侦测图像的数量</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><h2 id="文末"><a href="#文末" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M185.387 185.391c-59.747 59.809-58.927 155.698-.36 214.59.11.12.24.25.36.37l67.2 67.2c59.27 59.27 155.699 59.262 214.96 0 59.27-59.26 59.27-155.7 0-214.96l-37.106-37.106c-9.84-9.84-26.786-3.3-27.294 10.606-.648 17.722-3.826 35.527-9.69 52.721-1.986 5.822-.567 12.262 3.783 16.612l13.087 13.087c28.026 28.026 28.905 73.66 1.155 101.96-28.024 28.579-74.086 28.749-102.325.51l-67.2-67.19c-28.191-28.191-28.073-73.757 0-101.83 3.7-3.694 7.429-6.564 10.34-8.569a16.037 16.037 0 0 0 6.948-12.606c.396-10.567-3.348-21.456-11.698-29.806l-21.054-21.055c-5.521-5.521-14.182-6.199-20.584-1.731a152.482 152.482 0 0 0-20.522 17.197zM44.452 44.449c59.26-59.262 155.69-59.27 214.96 0l67.2 67.2c.12.12.25.25.36.37 58.566 58.892 59.387 154.781-.36 214.59a152.454 152.454 0 0 1-20.521 17.196c-6.402 4.468-15.064 3.789-20.584-1.731l-21.054-21.055c-8.35-8.35-12.094-19.239-11.698-29.806a16.037 16.037 0 0 1 6.947-12.606c2.912-2.005 6.64-4.875 10.34-8.569 28.074-28.073 28.192-73.639 0-101.83l-67.2-67.19c-28.238-28.239-74.3-28.069-102.324.51-27.75 28.3-26.872 73.934 1.155 101.96l13.087 13.087c4.35 4.35 5.769 10.79 3.783 16.612-5.864 17.194-9.042 34.999-9.69 52.721-.51 13.906-17.454 20.446-27.294 10.606l-37.106-37.106c-59.271-59.259-59.271-155.699-.001-214.959z"/></svg></a>文末</h2>
+<p>ESP-CAM模块建议改成外置IPEX天线进行传输，板载的PCB天线受干扰很大，而且具有指向性，被遮挡太多会影响视频的传输，而外置天线无论是增益还是稳定性都提高太多。</p>
+<p><img src="https://cdn.staticaly.com/gh/zhendehanzi/Blog-Images-1@master/20190811110257471.76rw59wshec0.webp" alt="20190811110257471"></p>
+
+            </div>
+
+            
+    
+    
+
+
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+    
+
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+            
+                <li class="post-nav-next">
+                    <a href="/tech/lab-getvideo/" rel="next">onvif+rtsp获取布控球视频流 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2023&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Mr.Z</div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:xuexizhuanyong147@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('\/sw.js');
+            });
+        }
+    </script>
+
+
+        
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>
